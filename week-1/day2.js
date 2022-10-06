@@ -19,5 +19,8 @@ function cleanUp(str) {
   let catMess = str.slice(str.indexOf("c") + 1);
   let toddlerMess = catMess.split("Eek!").join("");
   let reverseString = toddlerMess.split("").reverse().join("");
-  return reverseString;
+  let tomorrowInfoArray = reverseString.split("v").map((e) => e[0]);
+  let secretMessage = tomorrowInfoArray.join("").substring(1);
+
+  return secretMessage;
 }

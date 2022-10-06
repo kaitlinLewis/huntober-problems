@@ -33,7 +33,7 @@ function pickPun(string) {
         let sum = 0;
         let letterArray = e.split("");
         for (let letter of letterArray) {
-          if (letter === letter.toLowerCase() && letter !== " ") {
+          if (letter.charCodeAt() > 96 && letter.charCodeAt() < 123) {
             sum++;
           }
         }
@@ -45,7 +45,7 @@ function pickPun(string) {
         let sum = 0;
         let letterArray = e.split("");
         for (let letter of letterArray) {
-          if (letter === letter.toUpperCase() && letter !== " ") {
+          if (letter === letter.toUpperCase()) {
             sum++;
           }
         }

@@ -9,6 +9,7 @@ function reverseString(string) {
   for (let char of string) {
     reversedString = char + reversedString;
   }
+  //  string.reduce((a, acc) => acc + a, "")
   return reversedString;
 }
 
